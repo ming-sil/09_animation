@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Among Us!</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+        img{
+            width: 100%;
+        }
+
+        .bg{
+            width: 100%;
+            height: 50vh;
+            background-color: lightblue;
+            position: relative;
+            overflow: hidden;
+            background-image: url(https://blog.kakaocdn.net/dn/cAEaWa/btqLW863bG8/ByBEnMrJh9mWL7xLXKvJzK/img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: 25%;
+            left: -30%;
+
+            cursor: pointer;
+
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        .box_1{
+            animation-duration: 3s;
+        }
+        .box_2{
+            animation-duration: 2.3s;
+        }
+        .box_3{
+            animation-duration: 2s;
+        }
+
+        .gone{
+            display: none;
+        }
+
+        .h3{
+            transform: translate(50%,30%);
+        }
+
+        @keyframes move {
+            50%{
+                left: 120%;
+                /* transform: rotateY(180deg); */
+            }
+            100%{
+                left: -30%; 
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="bg">
+        <h1>다시!</h1>
+        <div class="box box_1"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMTY4/MDAxNjAwMzE4MTUzMTg0.DqpZ3y6RlY2NSt4590JQO_AYm0gnqOZE04oFCxGIpBsg.8UF4uC-4jN-8HjTyTmsPAlpc0gDJHrnUmDsgAOCNnX4g.GIF.jangma2017/%EC%96%B4%EB%AA%BD%EC%96%B4%EC%8A%A4-gif-%EA%B1%B7%EA%B8%B0%EB%AA%A8%EC%85%982.gif?type=w800" alt=""></div>
+        <div class="box box_2"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMTY4/MDAxNjAwMzE4MTUzMTg0.DqpZ3y6RlY2NSt4590JQO_AYm0gnqOZE04oFCxGIpBsg.8UF4uC-4jN-8HjTyTmsPAlpc0gDJHrnUmDsgAOCNnX4g.GIF.jangma2017/%EC%96%B4%EB%AA%BD%EC%96%B4%EC%8A%A4-gif-%EA%B1%B7%EA%B8%B0%EB%AA%A8%EC%85%982.gif?type=w800" alt=""></div>
+        <div class="box box_3"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMTY4/MDAxNjAwMzE4MTUzMTg0.DqpZ3y6RlY2NSt4590JQO_AYm0gnqOZE04oFCxGIpBsg.8UF4uC-4jN-8HjTyTmsPAlpc0gDJHrnUmDsgAOCNnX4g.GIF.jangma2017/%EC%96%B4%EB%AA%BD%EC%96%B4%EC%8A%A4-gif-%EA%B1%B7%EA%B8%B0%EB%AA%A8%EC%85%982.gif?type=w800" alt=""></div>
+    </div>
+    
+    <script>
+        (function(){
+
+
+            const wrapEl = document.querySelector('.bg');
+
+            function handleClick(e){
+                if(e.target.classList.contains('box')){
+                    e.target.classList.add('gone');
+                }else{
+                    
+                }
+            }
+
+            wrapEl.addEventListener('click', handleClick);
+
+
+        })();
+    </script>
+
+</body>
+</html>
